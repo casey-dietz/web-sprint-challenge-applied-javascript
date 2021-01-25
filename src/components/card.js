@@ -32,13 +32,17 @@ const Card = (article) => {
   author.classList.add('author')
   imgContainer.classList.add('img-container')
 
+  imgSrc.src = article.imgSrc;
+  headline.textContent = article.headline;
+  spanAuthorName.textContent = `By ${article.spanAuthorName}`
+
   card.appendChild(headline)
   card.appendChild(author)
   author.appendChild(imgContainer)
   imgContainer.appendChild(imgSrc)
   author.appendChild(spanAuthorName)
 
-
+  console.log(card)
   return card
 
 }
