@@ -55,21 +55,27 @@ const cardAppender = (selector) => {
 
   axios.get('https://lambda-times-api.herokuapp.com/articles')
     .then((response) => {
-      response.data.articles.javascript.forEach(element => {
-        document.querySelector(selector).appendChild(Card(element))
+      
+      response.data.articles.javascript.forEach(element => { 
+        let component = Card(element)
+        document.querySelector(selector).appendChild(Card(component))
       });
       response.data.articles.bootstrap.forEach(element => {
-        document.querySelector(selector).appendChild(Card(element))
+        let component = Card(element)
+        document.querySelector(selector).appendChild(Card(component))
       });
       response.data.articles.technology.forEach(element => {
-        document.querySelector(selector).appendChild(Card(element))
+        let component = Card(element)
+        document.querySelector(selector).appendChild(Card(component))
       });
       response.data.articles.jquery.forEach(element => {
-        document.querySelector(selector).appendChild(Card(element))
+        let component = Card(element)
+        document.querySelector(selector).appendChild(Card(component))
       });
       response.data.articles.node.forEach(element => {
-        document.querySelector(selector).appendChild(Card(element))
-      })
+        let component = Card(element)
+        document.querySelector(selector).appendChild(Card(component))
+      });
       })
       
     .catch((err) => {
